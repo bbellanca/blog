@@ -31,7 +31,6 @@
 $("#commentInput").submit(function(event){
 	event.preventDefault();
 	var newComment = $("textarea").val();
-	${post.comments}.add(newComment);
 	document.getElementById("allcomments").innerHTML += newComment+"<br>";
 	
 });
