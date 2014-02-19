@@ -2,7 +2,7 @@ package blog
 
 class CommentController {
 
-      def edit = {
+     def edit = {
         render(view:'edit',
                 model:[
                         comment:new Comment(),
@@ -17,7 +17,7 @@ class CommentController {
             redirect(
                     controller:'post',
                     action:'view',
-                    id:params.postId)
+                    postId:params.postId)
         } else {
             render(view:'edit',
                     model:[comment:comment,

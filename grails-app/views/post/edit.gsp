@@ -24,6 +24,8 @@
           <g:textArea name="content" value="${post.content}" rows="20" cols="50"/>
           </dd>
       </dl>
+      
+      
         <g:submitButton name="submit" value="Save"/>
   </g:form>
   </body>
