@@ -2,7 +2,6 @@ package blog
 
 class PostController {
 
-	//def defaultAction = 'list'
 	
 	def edit = {
 		def post = Post.get(params.id)
@@ -41,8 +40,6 @@ class PostController {
 	def view = {
 		render(view:'view', model:[post:Post.get(params.id)])
 	}
-	
-	
 	
     def index() { list() }
 }

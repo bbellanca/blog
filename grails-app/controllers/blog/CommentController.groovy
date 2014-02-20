@@ -3,7 +3,7 @@ package blog
 class CommentController {
 
      def edit = {
-        render(view:'edit',
+        render(view:'post.edit',
                 model:[
                         comment:new Comment(),
                         postId:params.postId])
@@ -13,15 +13,10 @@ class CommentController {
         def comment = new Comment(params)
         comment.dateCreated = new Date();
         comment.post = Post.get(params.postId)
-        if(comment.save()) {
-            redirect(
-                    controller:'post',
-                    action:'view',
-                    postId:params.postId)
-        } else {
-            render(view:'edit',
-                    model:[comment:comment,
-                            postId:params.postId])
+        comment.save()
+		def post = Post.get(params.postId)
+		def comments = Comment.findAllByPost(post).reverse()
+		render(template:'commentsPrint',model: ['comments':comments])
         }
     }
-}
+

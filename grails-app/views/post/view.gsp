@@ -2,6 +2,8 @@
 <html lang="en-US">
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <head profile="http://www.w3.org/2005/10/profile">
+<g:javascript library="jquery" />
+
     <title>${post.title}</title>
 </head>
 <body>
@@ -13,29 +15,38 @@
 </g:link>
 
 <div id="allcomments">
-<g:each in="${post.comments}" var="comment">
-    <div id ="comment" class="comment">
-    <p>${comment.comment}</p>
-    <p>Made by: ${comment.who.name} on ${comment.dateCreated}</p>
-    </div>
-</g:each>
+    <g:render template="/comment/commentsPrint" model="[comments:post.comments]"/>
 </div>
 
-<form id="commentInput">
-<textarea id="newComment" class="textinput" placeholder="Add a comment..." cols="72" rows="10" tabindex="101" data-min-length=""></textarea>
-<button type="submit" class = "button">Submit Comment</button>
-</form>
-</body>
+ <div id="validationerrors">
+      <g:renderErrors bean="${comment}"/>
+  </div>
+  
+  
+  
+  <g:formRemote name="commentForm" url="[controller: 'comment', action: 'save']" update="allcomments" >
+      
+    <g:hiddenField name="postId" value="${post.id}"/>
+      <dl>
+          <dt>Your name:</dt>
+          <dd>
+          <g:textField name="who.name"/>
+          </dd>
+          <dt>Your email:</dt>
+          <dd>
+          <g:textField name="who.email"/>
+          </dd>
+          <dt>Your website/blog:</dt>
+          <dd>
+          <g:textField name="who.url"/>
+          </dd>
+          <dt>Add your comment:</dt>
+          <dd>
+          <g:textArea name="comment" rows="20" cols="50"/>
+          </dd>
+      </dl>
+      <input type="submit" value="Submit" />
+  </g:formRemote>
 
-<script>
-$("#commentInput").submit(function(event){
-	event.preventDefault();
-	var newComment = $("textarea").val();
-	document.getElementById("allcomments").innerHTML += newComment+"<br>";
-	
-});
-
-
-</script>
 
 </html>

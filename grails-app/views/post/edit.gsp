@@ -26,7 +26,7 @@
       </dl>
       
       
-        <g:submitButton name="submit" value="Save"/>
+        <g:submitButton name="submit" value="save"/>
   </g:form>
   </body>
 </html>

@@ -10,7 +10,7 @@
   </div>
   <g:form controller="comment" action="save">
       
-    <g:hiddenField name="postId" value="${postId}"/>
+    <g:hiddenField name="post.id" value="${postId}"/>
       <dl>
           <dt>Your name:</dt>
           <dd>
