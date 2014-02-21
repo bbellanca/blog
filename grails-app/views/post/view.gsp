@@ -23,7 +23,7 @@
 					${post.teaser}
 				</p>
 				<div>
-					<fieldset class="innerSummary">
+					<fieldset class="innerContent">
 						${post.content}
 					</fieldset>
 				</div>
@@ -39,10 +39,8 @@
 		<fieldset class="content">
 		<h2>Comments:</h2>
 		<div id="allcomments">
-		  <fieldset class="content">
 			<g:render template="/comment/commentsPrint"
 				model="[comments:post.comments]" />
-			</fieldset>
 		</div>
 
 		<div id="validationerrors">

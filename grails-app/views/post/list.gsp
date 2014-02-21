@@ -35,11 +35,11 @@
 
 		<br>
 
-	</div>
 	<fieldset class="content">
 		<g:link controller="post" action="edit">
     Create a new post
 </g:link>
 	</fieldset>
+	</div>
 </body>
 </html>

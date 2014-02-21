@@ -2,9 +2,14 @@
 <html>
   <head>
       <title>Manage Post</title>
+      <link rel="stylesheet"
+	href="${resource(dir: 'css', file: 'ManifestStyle.css')}"
+	type="text/css">
   </head>
   <body>
-  <h1>Edit your post</h1>
+  <div class="inner">
+  <fieldset class="content">
+  <legend><h1>Edit your post</h1></legend>
   <div id="validationerrors">
       <g:renderErrors bean="${post}"/>
   </div>
@@ -28,5 +33,7 @@
       
         <g:submitButton name="submit" value="Save"/>
   </g:form>
+  </fieldset>
+  </div>
   </body>
 </html>
