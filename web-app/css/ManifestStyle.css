@@ -1,0 +1,44 @@
+
+
+  body {
+    color:             #000000;
+    background-image:  url(../images/aspen_colorado.jpg);
+	background-repeat: no-repeat;
+	background-size:   cover;
+	background-attachment: fixed;
+	}
+  h1{
+	text-align:        center;
+  }	
+  div.inner{
+    width:             85%;
+    display:           block;
+  	background:        rgb(0, 0, 0);
+  	background:        rgba(0, 0, 0, .5);
+    margin-left:       auto;
+    margin-right:      auto;
+  	
+  }
+  a:link {
+    text-decoration:   none;
+    color:             #FFFFFF;
+  }
+  a:hover {
+    text-decoration:   underline;
+  }
+  fieldset.content{
+    width:             60%;  	
+    background:        rgb(0, 0, 0);
+  	background:        rgba(0, 0, 0, .6);
+	color:             #FFFFFF;
+    margin-left:       auto;
+    margin-right:      auto;
+  }
+    fieldset.innerContent{
+    width:             100%;  	
+    background:        rgb(0, 0, 0);
+  	background:        rgba(0, 0, 0, .6);
+	color:             #FFFFFF;
+    margin-left:       auto;
+    margin-right:      auto;
+  }
