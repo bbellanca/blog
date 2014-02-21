@@ -1,0 +1,21 @@
+02-20 21:26:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (1287)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:38 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (1287)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (1287)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:42 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (1287)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:47 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (743)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (743)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]
+02-20 21:26:53 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "COMMENT VARCHAR(255) NOT NULL": "'Whats up with the really short descriptions lorum ipsum quantum blah blahb lhabal h khf  srjin aet Whats up with the really sho... (743)"; SQL statement:
+insert into comment (id, version, comment, date_created, post_id, who_id) values (null, ?, ?, ?, ?, ?) [22001-164]

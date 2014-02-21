@@ -2,6 +2,7 @@
 <html>
   <head>
       <title>Manage Post</title>
+      <link rel="stylesheet" href="${resource(dir: 'css', file: 'ManifestStyle.css')}" type="text/css">
   </head>
   <body>
   <h1>Edit your post</h1>
