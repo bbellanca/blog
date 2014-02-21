@@ -37,7 +37,7 @@
 
 		</fieldset>
 		<fieldset class="content">
-		<h2>Comments</h2>
+		<h2>Comments:</h2>
 		<div id="allcomments">
 		  <fieldset class="content">
 			<g:render template="/comment/commentsPrint"

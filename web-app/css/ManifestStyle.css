@@ -26,6 +26,9 @@
   a:hover {
     text-decoration:   underline;
   }
+  a:visited {
+    color:             #FFFFFF; 
+  }
   fieldset.content{
     width:             60%;  	
     background:        rgb(0, 0, 0);

@@ -1,0 +1,9 @@
+02-21 10:48:04 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "'This is the Looooong example which you should see cuz you didn''t clickThis is the Looooong example which you should see cuz yo... (1960)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-21 10:48:33 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "'This is the Looooong example which you should see cuz you didn''t clickThis is the Looooong example which you should see cuz yo... (555)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-21 10:48:42 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "'This is the Looooong example which you should see cuz you didn''t clickThis is the Looooong example which you should see cuz yo... (555)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
