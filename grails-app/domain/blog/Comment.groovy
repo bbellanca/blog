@@ -8,6 +8,7 @@ class Comment implements Comparable{
     String comment
     CommentAuthor who = new CommentAuthor()
     Date dateCreated
+	int id
 
     public int compareTo(Object o) {
         return o.dateCreated.compareTo(dateCreated)

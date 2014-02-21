@@ -41,5 +41,10 @@ class PostController {
 		render(view:'view', model:[post:Post.get(params.id)])
 	}
 	
+	def delete = {
+		Post.get(params.id).delete();
+		redirect(action:'list')
+	}
+	
     def index() { list() }
 }

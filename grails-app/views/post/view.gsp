@@ -13,6 +13,9 @@
 <g:link controller="post" action="edit" id="${post.id}">
   Edit this post
 </g:link>
+<g:link controller="post" action="delete" id="${post.id}">
+  Delete this post
+</g:link>
 
 <div id="allcomments">
     <g:render template="/comment/commentsPrint" model="[comments:post.comments]"/>
