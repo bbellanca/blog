@@ -12,22 +12,20 @@
 </title>
 </head>
 <body>
+<g:render template="/layouts/menuBar"/>
+
+<br/>
 	<div class="inner">
 		<fieldset class="content">
-			<h1>
+			<legend><h1>
 				${post.title}
-			</h1>
-			<fieldset>
-				<legend>Summary:</legend>
-				<p>
-					${post.teaser}
-				</p>
-				<div>
+			     </h1>
+			     </legend>
 					<fieldset class="innerContent">
+					<legend>${post.lastUpdated}</legend>
 						${post.content}
 					</fieldset>
-				</div>
-				</fieldset>
+			
 				<g:link controller="post" action="edit" id="${post.id}">
   Edit this post
 </g:link>
@@ -36,8 +34,9 @@
 </g:link>
 
 		</fieldset>
+		<br/>
 		<fieldset class="content">
-		<h2>Comments:</h2>
+		<legend><h2>Comments:</h2></legend>
 		<div id="allcomments">
 			<g:render template="/comment/commentsPrint"
 				model="[comments:post.comments]" />
@@ -49,6 +48,8 @@
 
 	</fieldset>
  <fieldset class="content">
+ <br/>
+ <legend>Add a comment</legend>
 
 		<g:formRemote name="commentForm"
 			url="[controller: 'comment', action: 'save']" update="allcomments">

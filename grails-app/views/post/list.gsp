@@ -7,8 +7,12 @@
 <title>My Posts</title>
 </head>
 <body>
+
+<g:render template="/layouts/menuBar"/>
+
+<br/>
 	<div class="inner">
-		<h1>My Posts</h1>
+		<h1 class="list">Our Clever Blog Name</h1>
 		<fieldset class="content">
 			<g:each in="${posts}" var="post">
 				<div>
