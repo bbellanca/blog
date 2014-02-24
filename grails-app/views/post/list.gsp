@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<g:render template="/layouts/menuBar"/>
+	<g:render template="/layouts/menuBar" />
 
-<br/>
+	<br />
 	<div class="inner">
 		<h1 class="list">Our Clever Blog Name</h1>
 		<fieldset class="content">
@@ -22,8 +22,9 @@
 							${post.lastUpdated}
 						</legend>
 						<h2>
-							<g:link controller="post" action="view" id="${post.id}">
-								${post.title}
+							<g:link controller="post" action="view" id="${post.id}"
+								params="[year:post.lastUpdated.format('yyyy'),month:post.lastUpdated.format('MM'),title:post.title]">
+								${fieldValue(bean:post,field:"title") }
 							</g:link>
 						</h2>
 						<fieldset>
@@ -39,11 +40,11 @@
 
 		<br>
 
-	<fieldset class="content">
-		<g:link controller="post" action="edit">
+		<fieldset class="content">
+			<g:link controller="post" action="edit">
     Create a new post
 </g:link>
-	</fieldset>
+		</fieldset>
 	</div>
 </body>
 </html>

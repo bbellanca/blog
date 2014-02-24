@@ -17,10 +17,9 @@
 <br/>
 	<div class="inner">
 		<fieldset class="content">
-			<legend><h1>
+			<h1>
 				${post.title}
 			     </h1>
-			     </legend>
 					<fieldset class="innerContent">
 					<legend>${post.lastUpdated}</legend>
 						${post.content}
@@ -36,7 +35,7 @@
 		</fieldset>
 		<br/>
 		<fieldset class="content">
-		<legend><h2>Comments:</h2></legend>
+		<h2>Comments:</h2>
 		<div id="allcomments">
 			<g:render template="/comment/commentsPrint"
 				model="[comments:post.comments]" />

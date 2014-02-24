@@ -2,7 +2,7 @@ package blog
 
 class PostController {
 
-	
+
 	def edit = {
 		def post = Post.get(params.id)
 		if(!post) {
@@ -10,15 +10,15 @@ class PostController {
 		}
 		render(view:'edit', model:[post:post])
 	}
-	
+
 	def list = {
 		render(
 				view:'list',
 				model:[posts:Post.list(
-						sort:'lastUpdated',
-						order:'desc')])
+					sort:'lastUpdated',
+					order:'desc')])
 	}
-	
+
 	def save = {
 		def post = loadPost(params.id)
 		post.properties = params
@@ -28,7 +28,7 @@ class PostController {
 			render(view:'edit', model:[post:post])
 		}
 	}
-	
+
 	private loadPost(id) {
 		def post = new Post();
 		if(id) {
@@ -36,15 +36,32 @@ class PostController {
 		}
 		return post
 	}
-	
+
 	def view = {
-		render(view:'view', model:[post:Post.get(params.id)])
+		if(params.id == null){
+			render(view:'view', model:[post:Post.findByTitle(params.title)])
+		}
+		else{
+			render(view:'view', model:[post:Post.get(params.id)])
+		}
 	}
-	
+
 	def delete = {
 		Post.get(params.id).delete();
 		redirect(action:'list')
 	}
-	
-    def index() { list() }
+
+	def search = {
+		
+		
+		render(
+				view:'list',
+				model:[posts:Post.findAllByTitle(params.query)(
+					sort:'lastUpdated',
+					order:'desc')])
+	}
+
+	def index() {
+		list()
+	}
 }
