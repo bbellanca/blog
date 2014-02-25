@@ -52,16 +52,17 @@ class PostController {
 	}
 
 	def search = {
-		
-		
-		render(
-				view:'list',
-				model:[posts:Post.findAllByTitle(params.query)(
-					sort:'lastUpdated',
-					order:'desc')])
-	}
 
-	def index() {
-		list()
+		if(params.value != null){
+			def posts = Post.findAllByTitleIlike("${params.value}%")
+			render(
+					view:'list',
+					model:[value: params.value,posts:posts.asList()])
+		
 	}
+}
+
+def index() {
+	list()
+}
 }

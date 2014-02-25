@@ -22,7 +22,9 @@
 			     </h1>
 					<fieldset class="innerContent">
 					<legend>${post.lastUpdated}</legend>
+					<pre>
 						${post.content}
+					</pre>
 					</fieldset>
 			
 				<g:link controller="post" action="edit" id="${post.id}">

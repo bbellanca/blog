@@ -13,3 +13,21 @@ insert into post (id, version, content, last_updated, published, teaser, title) 
 02-21 14:59:26 jdbc[2]: exception
 org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "'Grails is an open source web application framework that uses the Groovy programming language (which is in turn based on the Jav... (369)"; SQL statement:
 insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:49:37 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE('It''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should also b... (1159)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:51:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE('It''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should also b... (1159)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:51:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE('It''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should also b... (1159)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:53:20 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE('edwedIt''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should a... (1164)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:55:47 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE('It''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should also b... (1159)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]
+02-25 09:58:05 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "CONTENT VARCHAR(255) NOT NULL": "STRINGDECODE(' It''s obvious that numbers like 3 and 6 and 42 are values. Numbers are stable, unchanging.\r\n\r\nIt should also ... (1160)"; SQL statement:
+insert into post (id, version, content, last_updated, published, teaser, title) values (null, ?, ?, ?, ?, ?, ?) [22001-164]

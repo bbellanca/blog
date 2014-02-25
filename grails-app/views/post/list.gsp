@@ -13,7 +13,10 @@
 	<br />
 	<div class="inner">
 		<h1 class="list">Our Clever Blog Name</h1>
+		
+		
 		<fieldset class="content">
+			<g:if test="${posts.empty}">Your search returned no results!</g:if>
 			<g:each in="${posts}" var="post">
 				<div>
 					<fieldset>

@@ -10,6 +10,10 @@ class Comment implements Comparable{
     Date dateCreated
 	int id
 
+	static constraints = {
+		comment(maxSize: 5000)
+	  }
+	
     public int compareTo(Object o) {
         return o.dateCreated.compareTo(dateCreated)
     }

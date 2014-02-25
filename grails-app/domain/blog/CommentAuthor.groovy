@@ -12,6 +12,7 @@ class CommentAuthor {
 		name(nullable:false, blank:false)
         url(nullable:true, blank:true, url:true)
         email(nullable:true, blank:true, email:true) 
+		
     }
 }
 
