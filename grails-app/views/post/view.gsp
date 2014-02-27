@@ -15,7 +15,7 @@
 <g:render template="/layouts/menuBar"/>
 
 <br/>
-	<div class="inner">
+	<div class="outter">
 		<fieldset class="content">
 			<h1>
 				${post.title}

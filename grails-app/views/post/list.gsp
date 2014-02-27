@@ -11,11 +11,11 @@
 	<g:render template="/layouts/menuBar" />
 
 	<br />
-	<div class="inner">
+	<div class="outter">
 		<h1 class="list">Our Clever Blog Name</h1>
 		<fieldset class="content">
 			<g:each in="${posts}" var="post">
-				<div>
+				<div class="list">
 					<fieldset>
 						<legend>
 							Posted

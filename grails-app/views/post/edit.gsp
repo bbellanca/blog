@@ -10,7 +10,7 @@
   
 <g:render template="/layouts/menuBar"/>
 <br/>
-  <div class="inner">
+  <div class="outter">
   <fieldset class="content">
   <legend><h1>Edit your post</h1></legend>
   <div id="validationerrors">
