@@ -20,6 +20,8 @@ class CommentController {
 		render(template:'commentsPrint',model: ['comments':comments])
         }
 	
+	
+	
 	def delete = {
 		Comment.get(1).delete();
 		redirect(action:'view')

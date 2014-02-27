@@ -4,7 +4,7 @@
 <link rel="stylesheet"
 	href="${resource(dir: 'css', file: 'ManifestStyle.css')}"
 	type="text/css">
-<title>My Posts</title>
+<title>Our Clever Blog</title>
 </head>
 <body>
 
@@ -12,9 +12,9 @@
 
 	<br />
 	<div class="inner">
-		<h1 class="list">Our Clever Blog Name</h1>
-		
-		
+		<h1 class="list">Our Clever Blog</h1>
+
+
 		<fieldset class="content">
 			<g:if test="${posts.empty}">Your search returned no results!</g:if>
 			<g:each in="${posts}" var="post">
@@ -40,14 +40,17 @@
 				</div>
 			</g:each>
 		</fieldset>
-
 		<br>
 
-		<fieldset class="content">
-			<g:link controller="post" action="edit">
-    Create a new post
-</g:link>
-		</fieldset>
+			<g:if test="${!session.user || session.user.role != "author"}"></g:if>
+			<g:else>
+			<fieldset class="content">
+				<g:link controller="post" action="edit">
+				    Create a new post
+				</g:link>
+				</fieldset>
+			</g:else>
+	
 	</div>
 </body>
 </html>

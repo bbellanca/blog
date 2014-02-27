@@ -11,6 +11,15 @@ class PostController {
 		render(view:'edit', model:[post:post])
 	}
 
+	def beforeInterceptor = [action:this.&auth, except:["index", "list", "view"]]
+	
+	  def auth() {
+		if(!session.user) {
+		  redirect(controller:"user", action:"login")
+		  return false
+		}
+	  }
+	
 	def list = {
 		render(
 				view:'list',

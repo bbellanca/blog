@@ -12,71 +12,56 @@
 </title>
 </head>
 <body>
-<g:render template="/layouts/menuBar"/>
+	<g:render template="/layouts/menuBar" />
 
-<br/>
+	<br />
 	<div class="inner">
 		<fieldset class="content">
 			<h1>
 				${post.title}
-			     </h1>
-					<fieldset class="innerContent">
-					<legend>${post.lastUpdated}</legend>
-					<pre>
+			</h1>
+			<fieldset class="innerContent">
+				<legend>
+					${post.lastUpdated}
+				</legend>
+				<pre>
 						${post.content}
 					</pre>
-					</fieldset>
-			
+			</fieldset>
+
+
+			<g:if test="${!session.user || session.user.role != 'author'}"></g:if>
+			<g:else>
 				<g:link controller="post" action="edit" id="${post.id}">
-  Edit this post
-</g:link>
+				  Edit this post
+				</g:link>
 				<g:link controller="post" action="delete" id="${post.id}">
-  Delete this post
-</g:link>
+				  Delete this post
+				</g:link>
+			</g:else>
+
+
 
 		</fieldset>
-		<br/>
+		<br />
 		<fieldset class="content">
-		<h2>Comments:</h2>
-		<div id="allcomments">
-			<g:render template="/comment/commentsPrint"
-				model="[comments:post.comments]" />
-		</div>
+			<h2>Comments:</h2>
+			<div id="allcomments">
+				<g:render template="/comment/commentsPrint"
+					model="[comments:post.comments]" />
+			</div>
 
-		<div id="validationerrors">
-			<g:renderErrors bean="${comment}" />
-		</div>
+			<div id="validationerrors">
+				<g:renderErrors bean="${comment}" />
+			</div>
 
-	</fieldset>
- <fieldset class="content">
- <br/>
- <legend>Add a comment</legend>
-
-		<g:formRemote name="commentForm"
-			url="[controller: 'comment', action: 'save']" update="allcomments">
-
-			<g:hiddenField name="postId" value="${post.id}" />
-			<dl>
-				<dt>Your name:</dt>
-				<dd>
-					<g:textField name="who.name" />
-				</dd>
-				<dt>Your email:</dt>
-				<dd>
-					<g:textField name="who.email" />
-				</dd>
-				<dt>Your website/blog:</dt>
-				<dd>
-					<g:textField name="who.url" />
-				</dd>
-				<dt>Add your comment:</dt>
-				<dd>
-					<g:textArea name="comment" rows="20" cols="50" />
-				</dd>
-			</dl>
-			<input type="submit" value="Submit" />
-		</g:formRemote>
 		</fieldset>
+
+		<g:if test="${!session.user}"></g:if>
+		<g:else>
+			<g:render template="/layouts/newComment" />
+		</g:else>
+
 	</div>
 </body>
 </html>

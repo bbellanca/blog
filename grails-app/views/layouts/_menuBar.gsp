@@ -1,6 +1,7 @@
 <div class="menu">
 	<g:form controller="post" method="post" id="search-form">
 		<ul class="menu">
+			<li class="loginControl"><g:loginControl></g:loginControl></li>
 			<li><a href="http://localhost:8080/blog/post/">Home</a></li>
 			<li><a href="news.asp">News</a></li>
 			<li><a href="contact.asp">Contact</a></li>
@@ -55,7 +56,12 @@ input.searchBar{
 }
 
 
-
+li.loginControl{
+	position: absolute;
+	left: 0px;
+	padding: 0px;
+	
+	}
 
 
 input[type="text"] {
